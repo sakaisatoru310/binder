@@ -1,4 +1,5 @@
 body{
+  position: relative;
   .header{
     width: 100vw;
     height: 70px;
@@ -50,7 +51,7 @@ body{
       }
         .hoge{
           height: 100%;
-          width: auto；
+          width: auto
         }
         @keyframes infinity-loop {
           from {
@@ -66,5 +67,55 @@ body{
     margin: 0 46vw;
     bottom: 5px;
   }
+  .blogs{
+    position: absolute;
+    margin: auto;
+    top: 70px;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    overflow: scroll;
+  }
+    .blog-list{
+      margin: 15px 300px;
+      color: #ffffff;
+      background-color: #282928;
+    }
+  .form{
+    height: 700px;
+    width: 900px;
+    margin: 10px auto;
+    &__title{
+      display: block;
+      height: 25px;
+      width: calc(100% - 55px);
+      margin: 10px auto;
+      opacity: 0.5;
+      color: #000000;
+      opacity: 0.7;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+    &__text{
+      display: block;
+      width: calc(100% - 20px);
+      margin: 10px auto;
+      height: 70%;
+      font-size: 20px;
+      opacity: 0.7;
+      border-radius: 10px;
+      border: none;
+    }
+    &__btn{
+      display: block;
+      width: 100px;
+      height: 50px;
+      padding: 0 30px;
+      margin-left: 780px;
+      background-color: #282928;
+      color: #ffffff;
+      cursor: pointer;
+      
+    }
+  }
 }
-

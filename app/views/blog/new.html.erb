@@ -1,0 +1,7 @@
+
+
+<%= form_with model: @blog, url:blog_index_path, class: :form, local: true do |form| %>
+  <%= form.text_field :title, placeholder: :"    TITLE", class: :form__title %>
+  <%= form.text_area :content, placeholder: :"    What did you do today?", class: :form__text %>
+  <%= form.submit '投稿する', class: :form__btn %>
+<% end %>
