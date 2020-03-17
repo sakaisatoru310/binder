@@ -1,9 +1,8 @@
 body{
   .header{
-    width: 100%;
+    width: 100vw;
     height: 70px;
     display: flex;
-    padding: 0 15px;
     background-color: #282928;
     justify-content: space-between;
     &__title{
@@ -61,9 +60,11 @@ body{
             transform: translateX(-100%);
           }
         }
-        
-      
-    
+  }
+  #sns{
+    position: absolute;
+    margin: 0 46vw;
+    bottom: 5px;
   }
 }
 
