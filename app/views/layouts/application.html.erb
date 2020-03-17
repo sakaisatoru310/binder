@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Binder</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__title">
+        <%= link_to image_tag('binder.jpeg'),"#", class: "header__title--text"%>
+      </div>
+      <div class="header__right">
+        <div class="header__right__user-name">
+        <%= link_to "saroru","#", class:"header__right__user-name__mypage"%>
+        </div>
+        <div class="header__right__logout">
+          <%= link_to "ログアウト","#", class: "header__right__logout__btn"%>
+        </div>
+        <div class="header__right__new">
+          <%= link_to "新規投稿","#", class: "header__right__new__btn"%>
+        </div>
+    </header>
+    <div class="contents">
+      <div class="contents__back">
+          <%= image_tag'hosi.jpeg',class:'hoge'%>
+          <%= image_tag'umi.jpeg',class:'hoge'%>
+          <%= image_tag'mati.jpeg',class:'hoge'%>
+          <%= image_tag'neon.jpeg',class:'hoge'%>
+          <%= image_tag'siro.jpeg',class:'hoge'%>
+          <%= image_tag'kuro.jpeg',class:'hoge'%>
+          <%= image_tag'tokyo.jpeg',class:'hoge'%>
+      </div>
+      <div class="contents__back">
+          <%= image_tag'hosi.jpeg',class:'hoge'%>
+          <%= image_tag'umi.jpeg',class:'hoge'%>
+          <%= image_tag'mati.jpeg',class:'hoge'%>
+          <%= image_tag'neon.jpeg',class:'hoge'%>
+          <%= image_tag'siro.jpeg',class:'hoge'%>
+          <%= image_tag'kuro.jpeg',class:'hoge'%>
+          <%= image_tag'tokyo.jpeg',class:'hoge'%>
+      </div>
+      <%= yield %>
+    </div>
+  </body>
+</html>

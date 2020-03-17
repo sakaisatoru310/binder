@@ -1,0 +1,68 @@
+body{
+  .header{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    padding: 0 15px;
+    background-color: #282928;
+    justify-content: space-between;
+    &__title{
+      margin: 3px 0 0 0;
+    }
+    &__right{
+      display: flex;
+      padding: 0 100px 0 0;
+      color: #ffffff;
+      line-height: 70px;
+      font-size: 17px;
+      &__user-name{
+        &__mypage{
+          text-decoration: none;
+          color: #ffffff;
+          margin: 0 30px 0 0;
+        }
+      }
+      &__logout{
+        &__btn{
+          text-decoration: none;
+          color: #ffffff;
+          margin: 0 30px 0 0;
+        }
+      }
+      &__new{
+        &__btn{
+          text-decoration: none;
+          color: #ffffff;
+          margin: 0 30px 0 0;
+        }
+      }
+    }
+  }
+  .contents{
+    z-index: -1;
+    display: flex; /* 二つのスライドを横に並べる */
+    width: auto;
+    overflow: hidden;
+    height: calc(100vh - 70px);
+    &__back{
+      animation: infinity-loop 30s infinite linear 1s both; /* 無限ループアニメーションの設定 */
+      display: flex; /* スライドの要素を横に並べる */
+      position: relative;
+      }
+        .hoge{
+          height: 100%;
+          width: auto；
+        }
+        @keyframes infinity-loop {
+          from {
+            transform: translateX(0vw);
+          }
+          to {
+            transform: translateX(-100%);
+          }
+        }
+        
+      
+    
+  }
+}
