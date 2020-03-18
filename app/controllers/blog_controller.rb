@@ -13,9 +13,13 @@ class BlogController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @blog = Blog.find(params[:id])
+  end
+
   private
   def post_params
-    params.require(:blog).permit(:title, :content)
+    params.require(:blog).permit(:title, :image, :content)
   end
 
 end

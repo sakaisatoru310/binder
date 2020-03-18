@@ -1,16 +1,16 @@
 <% @blogs.each do |blog|%>
   <div class="blog-list">
     <div class="content">
-      <div class="content__image">
-        <%= image_tag 'binder.jpeg'%>
-      </div>
+      <%#<div class="content__image">
+        <%= blog.image%>
+      <%#</div>%>
       <div class="content__right">
         <div class="content__right__top">
-          <%= blog.title %>
+          <%= link_to blog.title, blog_path(blog.id), class: "title" %>
         </div>
         <div class="content__right__bottom">
-          <div class="content__right__bottom--date">
-            <%= blog.created_at %>
+          <div class="content__right__bottom__date">
+            <%= blog.created_at%>
           </div>
         </div>
       </div>

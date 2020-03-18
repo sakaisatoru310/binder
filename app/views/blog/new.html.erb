@@ -1,11 +1,11 @@
 
 
 <%= form_with model: @blog, url:blog_index_path, class: :form, local: true do |form| %>
-  <%= form.text_field :title, placeholder: :"    TITLE", class: :form__title %>
-  <%= form.text_area :content, placeholder: :"    What did you do today?", class: :form__text %>
+  <%= form.text_field :title, placeholder: :"TITLE", class: :form__title %>
+  <%= form.text_area :content, placeholder: :"What did you do today?", class: :form__text %>
   <%= form.label :image, class: :form__image do%>
       <%= icon('fas', 'image') %>
-      <%= form.file_field :image, class: :form__box__file%>
+      <%= form.file_field :image, class: :form__image__file%>
   <% end %>
   <%= form.submit '投稿する', class: :form__btn %>
 <% end %>
