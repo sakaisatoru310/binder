@@ -30,6 +30,16 @@
           
       }
 
+      #sns link {
+          display: block;
+          text-align: center;
+      }
+      #sns link::before {
+          display: block;
+          margin: 0 auto;
+          
+      }
+
       .dock li {
           display: block;
           position: absolute;
@@ -46,6 +56,15 @@
           margin: 0 1px;
           border-radius: 4px;
       }
+
+      .dock a {
+          display: block;
+          width: 30px;
+          height: 30px;
+          margin: 0 1px;
+          border-radius: 4px;
+      }
+
       .dock span {
           display: none;
       }
@@ -162,12 +181,21 @@
       <li>
         <a class="line" href="https://line.me/ja/">line</a>
       </li>
+      <% if user_signed_in? %>
       <li>
-        <a class="fas fa-door-open">logout</a>
+        <%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "fas fa-door-open" %>
       </li>
       <li>
         <a class="fas fa-pen-nib" href=/blog/new>新規投稿</a>
       </li>
+      <% else %>
+      <li>
+        <a class="fas fa-sign-in-alt" href=/users/sign_in>LOGIN</a>
+      </li>
+      <li>
+        <a class="fas fa-user-plus" href=/users/sign_up>新規登録</a>
+      </li>
+      <% end %>
     </ul>
     <script>
 

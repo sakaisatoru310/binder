@@ -67,6 +67,9 @@ body{
     justify-content: center;
     bottom: 2px;
     left: 44%;
+    .fas{
+      text-decoration: none;
+    }
   }
   .blogs{
     position: absolute;
@@ -82,7 +85,7 @@ body{
       .content{
         
         position: relative;
-        margin: 15px 300px;
+        margin: 30px 300px;
         padding: 40px 40px;
         background-color: #252525;
         opacity: 0.9;
@@ -93,6 +96,7 @@ body{
             
             font-size: 20px;
             .title{
+              padding: 40px 700px 40px 0;
               text-decoration: none;
               color: #ffffff;
             }
