@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+  
   <head>
     <title>Binder</title>
     <%= csrf_meta_tags %>
@@ -26,6 +27,7 @@
       #sns a::before {
           display: block;
           margin: 0 auto;
+          
       }
 
       .dock li {
@@ -41,7 +43,6 @@
           display: block;
           width: 30px;
           height: 30px;
-          padding: 4px;
           margin: 0 1px;
           border-radius: 4px;
       }
@@ -74,16 +75,18 @@
           border-style:solid;
           border-color:#666 transparent;
           border-width: 4px 4px 0;
+
+          
       }
 
       .facebook {
-          background: #315096;
+          background: #282928;
       }
       .facebook::before {
           content: url("data:image/svg+xml; base64, PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnICB2aWV3Qm94PScwIDAgMzIgMzInPjxwYXRoIGZpbGw9JyNmZmYnIGQ9J00xOCAzMmgtNlYxNkg4di01LjVsNC0uMDJWNy4yNEMxMiAyLjc0IDEzLjIgMCAxOC41IDBoNC40MnY1LjVoLTIuNzVDMTguMSA1LjUgMTggNi4zIDE4IDcuNzN2Mi43Nmg0Ljk1TDIyLjM4IDE2SDE4djE2eicvPjwvc3ZnPg==");
       }
       .twitter {
-          background: #55acee;
+          background: #282928;
       }
       .twitter::before {
           content: url("data:image/svg+xml; base64, PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnICB2aWV3Qm94PScwIDAgMzIgMzInPjxwYXRoIGZpbGw9JyNmZmYnIGQ9J00zMiA2LjA4Yy0xLjE4LjUyLTIuNDQuODctMy43NyAxLjAzIDEuMzUtLjggMi40LTIuMSAyLjktMy42Mi0xLjI4Ljc1LTIuNyAxLjMtNC4xOCAxLjYtMS4yLTEuMy0yLjktMi4wOC00LjgtMi4wOC0zLjYyIDAtNi41NiAyLjk0LTYuNTYgNi41NiAwIC41Mi4wNSAxLjAyLjE2IDEuNS01LjQ2LS4yNy0xMC4zLTIuOS0xMy41My02Ljg2LS41Ny45Ny0uOSAyLjEtLjkgMy4zIDAgMi4yOCAxLjE3IDQuMyAyLjkzIDUuNDctMS4wOC0uMDQtMi4xLS4zMy0yLjk3LS44My0uMDIuMDMtLjAyLjA2LS4wMi4xIDAgMy4xNyAyLjI3IDUuODIgNS4yNyA2LjQyLS41NS4xNS0xLjEzLjIzLTEuNzMuMjMtLjQyIDAtLjgzLS4wNS0xLjIzLS4xMi44MiAyLjYgMy4yNSA0LjUgNi4xMiA0LjU2LTIuMjUgMS43Ni01LjA4IDIuOC04LjE2IDIuOC0uNTMgMC0xLjA1LS4wMy0xLjU2LS4xQzIuOSAyNy45MyA2LjM1IDI5IDEwLjA2IDI5YzEyLjA4IDAgMTguNjgtMTAgMTguNjgtMTguNjggMC0uMjggMC0uNTYtLjAyLS44NSAxLjMtLjkyIDIuNC0yLjA4IDMuMjgtMy40eicvPjwvc3ZnPg==");
@@ -95,10 +98,20 @@
           content: url("data:image/svg+xml; base64, PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnICB2aWV3Qm94PScwIDAgMzIgMzInPjxwYXRoIGZpbGw9JyNmZmYnIGQ9J00xNy40NyAySDkuMUM1LjM0IDIgMS44IDQuODQgMS44IDguMTRjMCAzLjM2IDIuNTcgNi4wOCA2LjQgNi4wOC4yNiAwIC41IDAgLjc3LS4wMi0uMjUuNDctLjQzIDEtLjQzIDEuNTYgMCAuOTQuNSAxLjcgMS4xNCAyLjMtLjQ4IDAtLjk0LjAzLTEuNDUuMDNDMy41OCAxOC4xIDAgMjEuMDQgMCAyNC4xYzAgMy4wMiAzLjkyIDQuOTIgOC41NyA0LjkyIDUuMyAwIDguMjMtMyA4LjIzLTYuMDQgMC0yLjQyLS43LTMuODctMi45My01LjQ0LS43NS0uNTMtMi4yLTEuODQtMi4yLTIuNiAwLS45LjI2LTEuMzQgMS42LTIuNCAxLjQtMS4wOCAyLjM3LTIuNiAyLjM3LTQuMzcgMC0yLjEtLjk0LTQuMTctMi43LTQuODVoMi42NkwxNy40NyAyem0tMi45MiAyMC40OGMuMDYuMjguMS41Ny4xLjg3IDAgMi40NC0xLjU4IDQuMzUtNi4xIDQuMzUtMy4yIDAtNS41My0yLjA0LTUuNTMtNC40OCAwLTIuNCAyLjg4LTQuNCA2LjEtNC4zNS43NCAwIDEuNDQuMTMgMi4wOC4zMyAxLjc0IDEuMiAzIDEuOSAzLjM1IDMuMjh6bS01LjE1LTkuMWMtMi4xNi0uMDgtNC4yLTIuNDMtNC41OC01LjI2czEuMDctNSAzLjIzLTQuOTNjMi4xNi4wNSA0LjIgMi4zMiA0LjU4IDUuMTZzLTEuMDcgNS4wNy0zLjIzIDV6TTI2IDhWMmgtMnY2aC02djJoNnY2aDJ2LTZoNlY4eicvPjwvc3ZnPg==");
       }
       .line {
-          background: #00c300;
+          background: #282928;
       }
       .line::before {
           content: url("data:image/svg+xml; base64, PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnICB2aWV3Qm94PScwIDAgMzIgMzInPjxwYXRoIGZpbGw9JyNmZmYnIGQ9J00xNS45MyAxLjk1Yy03Ljk2IDAtMTQuNCA1LjI4LTE0LjQgMTEuOCAwIDUuODQgNS4yIDEwLjcgMTIuMDIgMTEuNjNoLjA4bC4yMy4wNGMuNzUuMSAxLjEuMjggMS4xIDEuMS0uMDIuOTItLjM4IDEuNi0uNiAyLjA0cy0uNjcgMi4yNSAxLjQgMS4xM2MxLjU4LS44OCA5LjM3LTQuNyAxMi44Ny0xMC4zNy45My0xLjQgMS41LTMgMS42Ny00LjY4di0uMTVsLjAzLS4yNXYtLjVjMC02LjUyLTYuNDQtMTEuOC0xNC40LTExLjh6TTkuOSAxNy4xNUg3LjEzYy0uNCAwLS43My0uMzMtLjczLS43M3YtNS41N2MwLS40LjMzLS43NC43NC0uNzRzLjczLjM0LjczLjc1djQuODNoMmMuNDIgMCAuNzUuMzMuNzUuNzNzLS4zMy43NS0uNzQuNzV6bTMuMTItLjczYzAgLjQtLjMzLjczLS43NC43M3MtLjczLS4zMy0uNzMtLjczdi01LjU3YzAtLjQuMzMtLjc0LjczLS43NHMuNzQuMzQuNzQuNzV2NS41NnptNi43LjVjMCAuMDItLjAyLjAzLS4wMy4wNGwtLjEuMDZjMCAuMDItLjAzLjAzLS4wNi4wNGwtLjA2LjAzYy0uMDIgMC0uMDUgMC0uMDguMDJoLS4wNWwtLjE1LjAzYy0uMDUgMC0uMSAwLS4xNC0uMDItLjAyIDAtLjA1IDAtLjA3LS4wMnMtLjA2IDAtLjA4IDBsLS4wNy0uMDVjLS4wMiAwLS4wNCAwLS4wNS0uMDItLjEtLjA3LS4xNy0uMTUtLjIzLS4yNEwxNS43MiAxM3YzLjRjMCAuNC0uMzMuNzMtLjczLjczcy0uNzQtLjMzLS43NC0uNzR2LTUuNTUtLjA0LS4xYy4wMi0uMDIuMDMtLjA1LjAzLS4wN3YtLjA2bC4wNi0uMXMwLS4wMi4wMi0uMDNjLjA1LS4wOC4xMi0uMTUuMi0uMi4wMiAwIC4wMy0uMDIuMDUtLjAzbC4wOC0uMDMuMDgtLjAyLjA3LS4wMi4xMy0uMDJIMTVjLjA1IDAgLjEuMDIuMTQuMDMuMDIgMCAuMDQgMCAuMDYuMDIuMDIgMCAuMDUgMCAuMDcuMDIuMDMgMCAuMDUuMDIuMDcuMDRsLjA2LjA0Yy4wNC4wMi4wOC4wNS4xLjEuMDUuMDMuMS4wOC4xMi4xM2wyLjg1IDMuNzd2LTMuNGMwLS40LjMzLS43My43My0uNzNzLjc0LjM0Ljc0Ljc1djUuNTZjMCAuMDYgMCAuMS0uMDIuMTZ2LjA1bC0uMDQuMWMwIC4wMi0uMDIuMDMtLjAzLjA1IDAgLjAzLS4wMi4wNS0uMDQuMDcgMCAuMDMtLjAzLjA2LS4wNS4wOGwtLjAzLjAzem00LjgyLTQuMDJjLjQgMCAuNzMuMzMuNzMuNzNzLS4zMy43My0uNzMuNzNoLTJ2MS4zMmgyYy40IDAgLjczLjMzLjczLjczcy0uMzMuNzUtLjczLjc1SDIxLjhjLS40MiAwLS43NC0uMzMtLjc0LS43NHYtNS41NWMwLS40LjMzLS43NC43My0uNzRoMi43NGMuNCAwIC43My4zNC43My43NXMtLjMzLjczLS43My43M2gtMnYxLjNoMnonLz48L3N2Zz4=");
+      }
+      .fas::before{
+          background: #282928;
+          color:#ffffff;
+          width: 20px;
+          height: 25px;
+          margin: 1px;
+          border-radius: 4px;
+          bottom:5px;
+          padding:5px 5px 0 5px;
       }
     </style>
   </head>
@@ -106,17 +119,11 @@
   <body>
     <header class="header">
       <div class="header__title">
-        <%= link_to image_tag('binder.jpeg'),root_path, class: "header__title--text"%>
+        <%= link_to image_tag('newbinder.png'),root_path, class: "header__title--text"%>
       </div>
       <div class="header__right">
         <div class="header__right__user-name">
         <%= link_to "saroru","#", class:"header__right__user-name__mypage"%>
-        </div>
-        <div class="header__right__logout">
-          <%= link_to "ログアウト","#", class: "header__right__logout__btn"%>
-        </div>
-        <div class="header__right__new">
-          <%= link_to "新規投稿",new_blog_path, class: "header__right__new__btn"%>
         </div>
     </header>
     <span class="contents">
@@ -154,6 +161,12 @@
       </li>
       <li>
         <a class="line" href="https://line.me/ja/">line</a>
+      </li>
+      <li>
+        <a class="fas fa-door-open">logout</a>
+      </li>
+      <li>
+        <a class="fas fa-pen-nib" href=/blog/new>新規投稿</a>
       </li>
     </ul>
     <script>
