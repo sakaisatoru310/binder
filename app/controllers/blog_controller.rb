@@ -1,7 +1,7 @@
 class BlogController < ApplicationController
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.includes(:user)
   end
 
   def new
@@ -19,7 +19,7 @@ class BlogController < ApplicationController
 
   private
   def post_params
-    params.require(:blog).permit(:title, :image, :content)
+    params.require(:blog).permit(:title, :image, :content).merge(user_id: current_user.id)
   end
 
 end

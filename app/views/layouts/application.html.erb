@@ -30,6 +30,16 @@
           
       }
 
+      #sns link {
+          display: block;
+          text-align: center;
+      }
+      #sns link::before {
+          display: block;
+          margin: 0 auto;
+          
+      }
+
       .dock li {
           display: block;
           position: absolute;
@@ -46,6 +56,15 @@
           margin: 0 1px;
           border-radius: 4px;
       }
+
+      .dock a {
+          display: block;
+          width: 30px;
+          height: 30px;
+          margin: 0 1px;
+          border-radius: 4px;
+      }
+
       .dock span {
           display: none;
       }
@@ -121,10 +140,10 @@
       <div class="header__title">
         <%= link_to image_tag('newbinder.png'),root_path, class: "header__title--text"%>
       </div>
-      <div class="header__right">
+      <%#<div class="header__right">
         <div class="header__right__user-name">
         <%= link_to "saroru","#", class:"header__right__user-name__mypage"%>
-        </div>
+        <%#</div>%>
     </header>
     <span class="contents">
         <ul class="contents__back">
@@ -163,11 +182,26 @@
         <a class="line" href="https://line.me/ja/">line</a>
       </li>
       <li>
-        <a class="fas fa-door-open">logout</a>
+        <%= link_to "一覧", root_path,  class: "fas fa-list" %>
+      </li>
+      <% if user_signed_in? %>
+      <li>
+        <%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "fas fa-door-open" %>
       </li>
       <li>
         <a class="fas fa-pen-nib" href=/blog/new>新規投稿</a>
       </li>
+      <li>
+        <%= link_to "MYPAGE", user_path(current_user), class: "fas fa-user" %>
+      </li>
+      <% else %>
+      <li>
+        <a class="fas fa-sign-in-alt" href=/users/sign_in>LOGIN</a>
+      </li>
+      <li>
+        <a class="fas fa-user-plus" href=/users/sign_up>新規登録</a>
+      </li>
+      <% end %>
     </ul>
     <script>
 
