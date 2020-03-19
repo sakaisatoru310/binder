@@ -1,0 +1,53 @@
+body{
+  .blogs{
+    position: absolute;
+    margin: auto;
+    top: 70px;
+    bottom: 45px;
+    left: 0;
+    right: 0;
+    overflow: scroll;
+    .postTitle{
+    color: #fff;
+    font-size: 30px;
+    margin: 15px 0 10px 30px;
+    text-shadow: #000 2px 2px 0;
+    }
+    .content{
+      position: relative;
+        margin: 30px 300px;
+        padding: 40px 40px;
+        background-color: #252525;
+        opacity: 0.9;
+        border-radius: 5px;
+      &__right{
+        &__top{
+          font-size: 20px;
+          .title{
+            width: 100px;
+              padding: 40px 600px 40px 0;
+              text-decoration: none;
+              color: #ffffff;
+              font-size: 25px;
+          }
+        }
+        &__bottom{
+          color: #fff;
+          margin: 15px 0 0 20px;
+          font-size: 15px;
+          text-decoration: none;
+          &--userName{
+            text-decoration: none;
+            color: #fff;
+          }
+          &--date{
+            color: gray;
+            position: absolute;
+            bottom: 5px;
+            right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

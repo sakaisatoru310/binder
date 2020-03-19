@@ -83,7 +83,6 @@ body{
     .blog-list{
       text-decoration: none;
       .content{
-        
         position: relative;
         margin: 30px 300px;
         padding: 40px 40px;
@@ -93,12 +92,23 @@ body{
         &__right{
           
           &__top{
-            
             font-size: 20px;
             .title{
-              padding: 40px 700px 40px 0;
+              width: 100px;
+              padding: 40px 600px 40px 0;
               text-decoration: none;
               color: #ffffff;
+              font-size: 25px;
+            }
+          }
+          &__name{
+            color: #fff;
+            margin: 15px 0 0 20px;
+            font-size: 15px;
+            text-decoration: none;
+            .name{
+              text-decoration: none;
+              color: #fff;
             }
           }
           &__bottom{
@@ -194,5 +204,62 @@ body{
     padding: 35px 20px;
     opacity: 0.9;
     border-radius: 10px;
+  }
+  .signup{
+    color: #fff;
+    font-size: 30px;
+    margin: 15px 0 10px 30px;
+    text-shadow: #000 2px 2px 0;
+  }
+  .login{
+    color: #fff;
+    font-size: 30px;
+    margin: 15px 0 10px 30px;
+    text-shadow: #000 2px 2px 0;
+  }
+  .field{
+    background-color: #252525;
+    opacity: 0.9;
+    color: #ffffff;
+    padding: 10px 0;
+    
+    text-align: center;
+    .email{
+      background-color: #252525;
+      background: rgba($color: #252525, $alpha: 0);
+      font-size: 15px;
+      margin: 10px 0;
+      color: #fff;
+    }
+    .password{
+      background-color: #252525;
+      background: rgba($color: #252525, $alpha: 0);
+      font-size: 15px;
+      margin: 10px 0;
+      color: #fff;
+    }
+    .nickname{
+      background-color: #252525;
+      background: rgba($color: #252525, $alpha: 0);
+      font-size: 15px;
+      margin: 10px 0;
+      color: #fff;
+    }
+
+  }
+  .actions{
+    padding: 0 0 15px 735px;
+    background-color: #252525;
+    opacity: 0.9;
+    .new{
+      background-color: #252525;
+      color: #fff;
+      cursor: pointer;
+    }
+    .login__btn{
+      background-color: #252525;
+      color: #fff;
+      cursor: pointer;
+    }
   }
 }
