@@ -5,7 +5,7 @@
     <title>Binder</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <style>
@@ -140,6 +140,29 @@
       <div class="header__title">
         <%= link_to image_tag('newbinder.png'),root_path, class: "header__title--text"%>
       </div>
+      <ul class="dropdwn">
+        <li>
+          <% if user_signed_in? %>
+            <%= current_user.nickname %>
+              <ul class="dropdwn_menu">
+                  <li><%= link_to "投稿一覧", root_path, class: "menu" %></li>
+                  <li><%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "menu"%></li>
+                  <li><%= link_to "新規投稿", new_blog_path, class: "menu" %></li>
+                  <li><%= link_to "MYPAGE", user_path(current_user), class: "menu" %></li>
+              </ul>
+          <% else %>
+          <% end %>
+        </li>
+      </ul>
+      <script>
+      $(function(){
+        $('.dropdwn li').hover(function(){
+            $("ul:not(:animated)", this).slideDown('fast');
+        }, function(){
+            $("ul.dropdwn_menu",this).slideUp('fast');
+        });
+      });
+      </script>
       <%#<div class="header__right">
         <div class="header__right__user-name">
         <%= link_to "saroru","#", class:"header__right__user-name__mypage"%>
