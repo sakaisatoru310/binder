@@ -9,6 +9,7 @@ body{
     &__title{
     }
     .dropdwn{
+      font-family: "ヒラギノ明朝 ProN","Hiragino Mincho ProN";
       background: rgba($color: #252525, $alpha: 0.9);
       position: absolute;
       z-index: 2;
@@ -56,6 +57,7 @@ body{
         }
   }
   #sns{
+    font-family: "ヒラギノ明朝 ProN","Hiragino Mincho ProN";
     display: flex;
     position: absolute;
     justify-content: center;
@@ -66,6 +68,7 @@ body{
     }
   }
   .blogs{
+    font-family: "ヒラギノ明朝 ProN","Hiragino Mincho ProN";
     position: absolute;
     margin: auto;
     top: 70px;
