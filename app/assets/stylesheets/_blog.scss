@@ -27,34 +27,6 @@ body{
         }
       }
     }
-    &__right{
-      display: flex;
-      padding: 0 100px 0 0;
-      color: #ffffff;
-      line-height: 70px;
-      font-size: 17px;
-      &__user-name{
-        &__mypage{
-          text-decoration: none;
-          color: #ffffff;
-          margin: 0 30px 0 0;
-        }
-      }
-      &__logout{
-        &__btn{
-          text-decoration: none;
-          color: #ffffff;
-          margin: 0 30px 0 0;
-        }
-      }
-      &__new{
-        &__btn{
-          text-decoration: none;
-          color: #ffffff;
-          margin: 0 30px 0 0;
-        }
-      }
-    }
   }
   .contents{
     z-index: -1;
