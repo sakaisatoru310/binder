@@ -34,13 +34,13 @@ body{
   }
   .contents{
     z-index: -1;
-    display: flex; /* 二つのスライドを横に並べる */
+    display: flex;
     width: auto;
     overflow: hidden;
     height: calc(100vh - 70px);
     &__back{
-      animation: infinity-loop 30s infinite linear 1s both; /* 無限ループアニメーションの設定 */
-      display: flex; /* スライドの要素を横に並べる */
+      animation: infinity-loop 30s infinite linear 1s both;
+      display: flex;
       position: relative;
       }
         .hoge{

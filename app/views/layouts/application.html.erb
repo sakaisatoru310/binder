@@ -219,14 +219,11 @@
       <% end %>
     </ul>
     <script>
-
-      // マウスホバーした時の拡大率
       var zoom = 4;
 
       (function(zoom) {
         'use strict'
 
-        //
         if('ontouchstart' in window) return;
         var anime;
         var mouseX;
@@ -246,11 +243,9 @@
             icon.appendChild(span);
             anchor.textContent = '';
   
-            // icon.style.transition = ...でもOK
             icon.setAttribute('style', 'transition:.3s;left:' + i * defaultWidth + 'px');
         });
   
-        // 50/sのフレームレートで実行される、各アイコンの位置や大きさを決めている関数
         function scaling(x) {
             for(var i = icons.length; i--;) {
               var icon = icons[i];
@@ -261,8 +256,6 @@
                   var scale = currentScale + (1 + (zoom - 1) * Math.cos(rad) - currentScale)/5;
                   var currentLeft = icon.offsetLeft;
                   var left = currentLeft + (i * defaultWidth + 2 * (zoom - 1) * defaultWidth * Math.sin(rad) -currentLeft)/5;
-                  // icon.style.left .., icon.style.transform = ..じゃないのは、速度を
-                  // 優先したため
                   icon.setAttribute('style', 'left:' + left + 'px;transform:scale(' + scale + ')');
               } else {
                   var left;
@@ -282,31 +275,19 @@
             mouseX = e.clientX - dock.getBoundingClientRect().left;
         });
 
-        // dockの上にマウスが入ったときに各アイコンの拡大処理をスタート
         dock.addEventListener('mouseenter', function(e) {
-            // フレームレート 50/s で各アイコンを拡大/縮小する
             anime = setInterval(function() {
               scaling(mouseX);
             }, 20);
-  
-            // dock自体も拡大しないと、iconの隙間にマウスが入ったときに
-            // 不意に縮小する
             dock.style.height = defaultWidth * zoom + 'px';
             dock.style.marginTop = -(zoom - 1) * defaultWidth + 'px';
         });
 
-        // マウスがdockから離れたとき
         dock.addEventListener('mouseleave', function(e) {
             clearInterval(anime);
             dock.style.height = defaultWidth + 'px';
             dock.style.marginTop = 0;
-  
-            // 通常の状態に戻る縮小処理はJavaScriptじゃなくてcssのtransitionでやってる
-            // jsでやると、全ての処理が終了するまでanime処理を終わらせられなくて、その間に
-            // またmouseenterになったときの処理が面倒
             for(var i = icons.length; i--;) {
-              // tansform:scaleは書かなくても、setAttributeでやっていると
-              // transform属性自体削除されているのでscale(1)扱いになる
               icons[i].setAttribute('style', 'transition: .3s;left:' + i * defaultWidth + 'px');
             }
         });
