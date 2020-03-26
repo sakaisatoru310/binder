@@ -204,17 +204,17 @@
         <%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "fas fa-door-open" %>
       </li>
       <li>
-        <a class="fas fa-pen-nib" href=/blog/new>新規投稿</a>
+        <%= link_to "新規投稿", new_blog_path, class: "fas fa-pen-nib" %></li>
       </li>
       <li>
         <%= link_to "MYPAGE", user_path(current_user), class: "fas fa-user" %>
       </li>
       <% else %>
       <li>
-        <a class="fas fa-sign-in-alt" href=/users/sign_in>LOGIN</a>
+        <%= link_to "LOGIN", new_user_session_path, class: "fas fa-sign-in-alt" %></li>
       </li>
       <li>
-        <a class="fas fa-user-plus" href=/users/sign_up>新規登録</a>
+        <%= link_to "新規登録", new_user_registration_path, class: "fas fa-user-plus" %></li>
       </li>
       <% end %>
     </ul>
