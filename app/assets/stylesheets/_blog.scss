@@ -76,7 +76,6 @@ body{
     left: 0;
     right: 0;
     overflow: scroll;
-  
     .blog-list{
       text-decoration: none;
       .content{
@@ -87,7 +86,6 @@ body{
         opacity: 0.9;
         border-radius: 5px;
         &__right{
-          
           &__top{
             font-size: 20px;
             .title{
@@ -158,7 +156,6 @@ body{
       font-size: 25px;
       &__file{
         display: none;
-        
       }
     }
     &__btn{
@@ -172,7 +169,6 @@ body{
       color: #ffffff;
       cursor: pointer;
       border: none;
-      
     }
   }
   .blogTitle{
@@ -246,7 +242,6 @@ body{
       margin: 10px 0;
       color: #fff;
     }
-
   }
   .actions{
     padding: 0 0 15px 735px;
