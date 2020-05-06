@@ -1,24 +1,43 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# name
 
-Things you may want to cover:
+binder
 
-* Ruby version
+1日1日の気づきや学びをアウトプットする作業がバインダーやルーズリーフに似ていることからbinderという名前にしました。
+ 
+個人やチーム単位で開発の進捗や学びなどを記述する簡易的な日誌のようなアプリです。
+ 
+# Features
+ 
+私自身が言語化することを苦手としている為、毎日の学びを逐一言語化する為のアプリを制作しました。
 
-* System dependencies
+１日１日の記述を集中して取り組めるようにこのアプリで投稿した記述は編集、削除できないようになっていいます。
 
-* Configuration
+アプリの機能的には簡素なものなので見た目を特に力を入れました。
+ 
+# Requirement
+ 
+"hoge"を動かすのに必要なライブラリなどを列挙する
+ 
+* ruby 2.5.1
+ 
+# Usage
+ 
+トップページからアカウントをお持ちの方は画面中央下部のログインボタンを、お持ちでない方は同じく画面中央下部の新規作成のボタンをクリックしてください。
 
-* Database creation
+ログインされましたら、画面上部のアカウント名または画面中央下部の新規投稿をクリックしてください。
 
-* Database initialization
+本日の学びやアウトプットしたい記述を記入し、投稿してください。
 
-* How to run the test suite
+投稿が完了しましたら、トップページに記述が反映されます。投稿されているタイトルをクリックすると本文を閲覧することができ、投稿者の名前をクリックするとそのユーザーが投稿した一覧が表示されます。
+ 
+# Note
+ 
+上記にも記述しましたが、一度投稿した記述は編集、削除することができませんので、くれぐれもご注意ください。また、特定の個人、企業様の誹謗中傷はお控えくだいさい。
+ 
+# Author
+ 
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* 坂井　智
+* tuba310@gmail.com
