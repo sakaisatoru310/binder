@@ -71,3 +71,8 @@ group :production do
 end
 
 gem 'rails_12factor', group: :production
+
+group :development, :production, :test do
+  gem 'devise'
+  gem 'jquery-rails'
+end
