@@ -1,0 +1,19 @@
+<% @blogs.each do |blog|%>
+  <div class="blog-list">
+    <div class="content">
+      <div class="content__right">
+        <div class="content__right__top">
+          <%= link_to blog.title, blog_path(blog.id), class: "title" %>
+        </div>
+        <div class="content__right__name">
+          <%= link_to blog.user.nickname, user_path(blog.user), class: "name"%>
+        </div>
+        <div class="content__right__bottom">
+          <div class="content__right__bottom__date">
+            <%= blog.created_at.strftime("%Y年-%m月-%d日%H:%M") %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

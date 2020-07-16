@@ -1,4 +1,5 @@
 class BlogController < ApplicationController
+  before_action :move_to_index, except: [:index, :show, :search]
 
   def index
     @blogs = Blog.includes(:user).order("created_at DESC")
@@ -15,6 +16,10 @@ class BlogController < ApplicationController
 
   def show
     @blog = Blog.find(params[:id])
+  end
+
+  def search
+    @blogs = Blog.search(params[:keyword])
   end
 
   private
